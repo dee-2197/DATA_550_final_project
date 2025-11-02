@@ -6,7 +6,7 @@ output: github_document
 
 # Generating Final Report
 
-To generate th final report, I use make command as there is a makefile in my repo that describes targets, pre requisites and action. It contains targets to make demographics tables, box plots and regression tables to make final report. The make command uses code in code folder 04_render_report.R
+To generate the final report, I used make command as there is a makefile in my repo that describes targets, pre requisites and action. It contains targets to make demographics tables, box plots and regression tables to make final report. The make command uses code in code folder 04_render_report.R and as rule to make final_report.html is first, so running make command renders the final_report
 
 # Geneating Demographic Tables
 
