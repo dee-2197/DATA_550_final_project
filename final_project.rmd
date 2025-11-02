@@ -1,0 +1,64 @@
+---
+title: 'Final Project 2: Rmarkdown'
+author: "Deepanshu Goel"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r, loading library, include=FALSE}
+library(here)
+library(ggplot2)
+library(gtsummary)
+library(labelled)
+```
+## Introduction
+I took the dataset from kaggle but its  originally from the National Institute of Diabetes and Digestive and Kidney Diseases. The objective of the dataset is to diagnostically predict whether a patient has diabetes (outcome) based on blood sugar level (exposure), controlling for age, number of pregnancies, bmi and insulin levels
+
+### Analysis
+as the outcome is diachromatus so we will use logistic regression with an objective to find association between blood sugar level an diabetes outcome while controlling for age, number of pregnancies, bmi and insulin levels
+
+```{r, load data, echo=TRUE, message=FALSE}
+here::i_am("final_project.rmd")
+data  <-  readRDS(
+  file = here::here("output/clean_data.rds")
+)
+```
+
+## Tabular Analysis
+```{r, table1, echo=FALSE}
+here::i_am("final_project.rmd")
+table1 <- readRDS(
+  file = here::here("output/table1.rds")
+)
+table1
+```
+
+Table 1- Demographics Data
+
+tabular demographic data analysis  of all 768 participants with variables like pregnancies, insulin, BMI ,age along with blood glucose among diabetic and non diabetic. we see diabetic are comparitively older individuals with higher BMI and glucose levels compared to non diabetic. they also have lower insulin and more pregnancies than non diabetic
+
+## Graphical Analysis
+
+```{r, fig.6, echo=FALSE}
+here::i_am("final_project.rmd")
+knitr::include_graphics(
+  here::here("output/boxplot.png")
+)
+```
+
+Figure 1 distribution of our exposure (blood glucose) with outcome (diabetes)
+
+This boxplot illustrates the distribution of glucose levels according to diabetes outcome. Observing the graph, we can see that individuals with diabetes generally have higher glucose levels, indicating that elevated glucose is associated with an increased risk of diabetes. Among non-diabetic individuals, there are more outliers, most of which are above the median. This suggests that while some non-diabetic individuals have high glucose levels, glucose alone is not the sole determinant of diabetes risk.
+
+## Primary Regression Model and Table
+```{r, regression, echo=FALSE, warning=FALSE, message=FALSE}
+here::i_am("final_project.rmd")
+primary_regression_table <- readRDS(
+  file = here::here("output/regression_tables.rds")
+)
+primary_regression_table
+```
+
+Regression Table
+
+None of the variables can lone predict diabetes with BMI and pregnancy slightly associated not glucose as confidence interval contains null value, not insulin and age as along with confidence interval containing null value, the p value is more than threshold of 0.05, hence not significant 

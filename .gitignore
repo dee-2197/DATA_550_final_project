@@ -1,0 +1,6 @@
+final_project.Rproj
+*.html
+output/*.rds
+output/*png
+.Rhistory
+.Rproj.user
