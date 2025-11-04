@@ -29,3 +29,9 @@ In the repo, code folder contains code- 03_make_regression_tables.R to
 generate regression table for my report. Make
 output/regression_tables.rds also generate table in output folder named
 regression_tables.rds
+
+# Synchronizing Package Repository
+
+In the repo, makefile contains code to synchronize package repository,
+by simply running make install in the terminal I can synchronize package
+repository
