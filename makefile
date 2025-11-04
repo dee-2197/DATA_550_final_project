@@ -17,3 +17,7 @@ output/regression_tables.rds: code/03_make_regression_tables.R output/clean_data
 .PHONY: clean
 clean:
 	rm -f output/*.html && rm -f output/*.png && rm -f final_project.html
+	
+.PHONY: install
+install:
+	Rscript -e "renv::restore(prompt = FALSE)"
