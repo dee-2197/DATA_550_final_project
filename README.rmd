@@ -50,3 +50,4 @@ We can add "-it" in starting and "bash" at end like " docker run -it -v "/$(pwd)
 
 # fully automatized report generation
 WE can use make command "make final_project/final_project.html" in bash terminal. It Will build an image and generate report automatically, which can be accessed in final project directory in your local machine
+hint- use command "make clean" if u run multiple times, as it will remove everything from final_project directory, for fresh report 
