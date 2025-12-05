@@ -39,34 +39,38 @@ you can synchronize package repository
 
 # Instructions for building a docker image
 
-the repo contains a dockerfile, so for building an docker image, just
+The repo contains a dockerfile, so for building an docker image, just
 type “docker build -t <image_tag> .” in the bash terminal. Period (.) at
 the end is important, as it tells docker to look for dockerfile in the
 repo in order to build an image. for <image_tag> you can give any name
 to image or simply type “make final_project_image” in the bash terminal,
-to build an image. link to docker image on dockerhub-
+to build an image.
+
+Link to docker image on dockerhub-
 <https://hub.docker.com/repository/docker/deepanshugoel21/final_project_image/general>
 
 # Instructions for running a docker image and automatically create a report
 
-after building a docker image, to run a docker image just type “docker
+After building a docker image, to run a docker image just type “docker
 run
 -v”/$(pwd)"/final_project:/home/rstudio/project/final_project <image_tag>" in the bash terminal. image_tag- use same name used to build an image. "/$(pwd)“-
 command substitution for working directory and in quotations as has
 space, We used extra / as using windows operating system. This command
 mounts project_final directory of our system root directory to the
 project_final directory of image root directory, so as to open final
-report created in image, in local final_project directory. We can
-add”-it” in starting and “bash” at end like ” docker run -it -v
+report created in image, in local final_project directory.
+
+We can add “-it” in starting and “bash” at end like ” docker run -it -v
 “/\$(pwd)”/final_project:/home/rstudio/project/final_project <image_tag>
 bash” in the bash terminal, It opens an interactive container where type
 “make” to build report and type “mv final_project.html final_project” in
 order to view report in final_project in local directory
 
-# fully automatized report generation
+# Fully automatized report generation
 
-WE can use make command “make final_project/final_project.html” in bash
+We can use make command “make final_project/final_project.html” in bash
 terminal. It Will build an image and generate report automatically,
 which can be accessed in final project directory in your local machine
-hint- use command “make clean” if u run multiple times, as it will
+
+Hint- use command “make clean” if u run multiple times, as it will
 remove everything from final_project directory, for fresh report
