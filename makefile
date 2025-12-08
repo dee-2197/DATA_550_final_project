@@ -36,4 +36,4 @@ final_project_image: dockerfile $(projectfiles) $(renvfiles)
 
 #Rule to run a container using image and build report automatically
 final_project/final_project.html:
-	docker build -t final_project_image . && docker run -v "/$$(pwd)"/final_project:/home/rstudio/project/final_project final_project_image
+	docker run -v "/$$(pwd)"/final_project:/home/rstudio/project/final_project deepanshugoel21/final_project_image

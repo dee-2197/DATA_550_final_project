@@ -49,7 +49,7 @@ to build an image.
 Link to docker image on dockerhub-
 <https://hub.docker.com/repository/docker/deepanshugoel21/final_project_image/general>
 
-# Instructions for running a docker image and automatically create a report
+# Instructions for running a docker image and automatically creating a report
 
 After building a docker image, to run a docker image just type “docker
 run
