@@ -65,15 +65,14 @@ We can add “-it” in starting and “bash” at end like ” docker run -it -
 “/\$(pwd)”/report:/home/rstudio/project/final_project <image_tag> bash”
 in the bash terminal, It opens an interactive container where type
 “make” to build report and type “mv final_project.html
-final_project_output” in order to view report in final_project in local
-directory
+final_project_output” in order to view report in “report - folder” in
+local directory
 
 # Fully automatized report generation
 
 We can use make command “make report/final_project.html” in bash
 terminal. It Will build an image and generate report automatically,
-which can be accessed in final_project_output directory in your local
-machine
+which can be accessed in report directory in your local machine
 
 Hint- use command “make clean” if u run multiple times, as it will
 remove everything from final_project directory, for fresh report
