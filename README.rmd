@@ -55,7 +55,7 @@ Link to docker image on dockerhub-
 
 After building a docker image, to run a docker image just type “docker
 run
--v”/$(pwd)"/report:/home/rstudio/project/final_project <image_tag>" in the bash terminal. image_tag- use same name used to build an image. "/$(pwd)“-
+-v "/$(pwd)"/report:/home/rstudio/project/final_project <image_tag>" in the bash terminal.($there is "space" after -v ) image_tag- use same name used to build an image. "/$(pwd)“-
 command substitution for working directory and in quotations as has
 space, We used extra / as using windows operating system. This command
 mounts project_final directory of our system root directory to the
