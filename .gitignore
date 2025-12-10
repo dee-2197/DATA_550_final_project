@@ -4,3 +4,4 @@ output/*.rds
 output/*png
 .Rhistory
 .Rproj.user
+final_project_image
