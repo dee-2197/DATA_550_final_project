@@ -17,7 +17,7 @@ output/regression_tables.rds: code/03_make_regression_tables.R output/clean_data
 	
 .PHONY: clean
 clean:
-	rm -f output/*.html && rm -f output/*.png && rm -f final_project.html && rm -f final_project/*
+	rm -f output/*.html && rm -f output/*.png && rm -f final_project.html && rm -f report/*
 	
 .PHONY: install
 install:
@@ -35,5 +35,5 @@ final_project_image: dockerfile $(projectfiles) $(renvfiles)
 	touch $@
 
 #Rule to run a container using image and build report automatically
-final_project_output/final_project.html:
-	docker run -v "/$$(pwd)"/final_project_output:/home/rstudio/project/final_project deepanshugoel21/final_project_image
+report/final_project.html:
+	docker run -v "/$$(pwd)"/report:/home/rstudio/project/final_project deepanshugoel21/final_project_image
