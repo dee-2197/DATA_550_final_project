@@ -61,7 +61,7 @@ quotations as has space, We used extra / as using windows operating
 system. This command mounts project_final directory of our system root
 directory to the project_final directory of image root directory, so as
 to open final report created in image, in local final_project directory.
-(Note: it will work well in windows operatimg system)
+(Note: it will work well in windows operatimg sys)
 
 We can add “-it” in starting and “bash” at end like ” docker run -it -v
 “/\$(pwd)”/report:/home/rstudio/project/final_project <image_tag> bash”
@@ -75,6 +75,10 @@ directory
 We can use make command, just type “make report/final_project.html” in
 bash terminal. It Will build an image and generate report automatically,
 which can be accessed in report directory in your local machine
+
+note- to create final automated report, you have to download
+deepanshugoel21/final_project_image from dockerhub
+<https://hub.docker.com/repository/docker/deepanshugoel21/final_project_image>
 
 Hint- use command “make clean” if u run multiple times, as it will
 remove everything from final_project directory, for fresh report
