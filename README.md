@@ -130,7 +130,7 @@ directory. (Note: it will work well in windows operatimg system)
 We can add “-it” in starting and “bash” at end like
 
 ``` bash
-docker run -it -v “/\$(pwd)”/report:/home/rstudio/project/final_project <image_tag> bash
+docker run -it -v "/$(pwd)"/report:/home/rstudio/project/final_project <image_tag> bash
 ```
 
 in the bash terminal, It opens an interactive container where type
